@@ -1,67 +1,441 @@
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Ronit Rai">
-    <meta name="generator" content="">
-    <title>Starter Template</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ronit Rai">
+  <meta name="generator" content="">
+  <title>Ronit Rai</title>
 
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cover/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      [v-cloak]{
-        display: none;
-      }
-    </style>
 
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+  <style>
+    [v-cloak] {
+      display: none;
+    }
     
-    <!-- Custom styles for this template -->
-    <link href="assets/css/cover.css" rel="stylesheet">
-  </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
    
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="app" v-cloak>
-      <header class="mb-auto">
-        <div>
-          <h3 class="float-md-start mb-0">Cover</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/cover.css" rel="stylesheet">
+
+</head>
+
+<body class="text-center text-bg-dark" >
+
+  <div class="container-wrapper">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"  id="app" v-cloak>
+      <header class="mb-auto fixed-top p-3"  id="navbar-header">
+        <div data-bs-spy="scroll" data-bs-target=".nav-masthead" data-bs-smooth-scroll="true" tabindex="0">
+          <nav class="nav nav-masthead" style="justify-content: center;"  id="nav-active">
+            <a class="nav-link fw-bold py-1 px-0" href="#">Home</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#about">About</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#skills">Skills</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#projects">Projects</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#contact">Contact</a>
           </nav>
         </div>
       </header>
 
-      <main class="px-3">
-        <h1> {{ message }}</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+      <main class="px-3" id="main-intro">
+        <h1>RONIT RAI</h1>
+
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+          A<span v-if="/[aeiou]/i.test(message[0])">n</span> <span id="changing-text">{{ message }}</span> <br>
         </p>
+        <div class="row icons-row" style="color: black;">
+          <a style="text-align:end; color: red;" href="https://www.linkedin.com/in/ronit-rai/" target="_blank" class="col icons"><i class="bi bi-linkedin"></i></a>
+          <a style="text-align: start; color: green;" href="https://github.com/RonRaj101" target="_blank" class="col icons"><i class="bi bi-github"></i></a>
+        </div>
+        <br>
+
       </main>
 
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
+
     </div>
 
+  </div>
+
+
+
+  <div class="mt-5 border-rounded" id="about">
+
+    <div class="card mb-3 bg-transparent text-start" style="border: none;">
+      <div class="row g-0">
+        <div class="col-lg-4 col-md-12 col-12" style="align-self: center;">
+          <img src="assets/img/IMG-20221107-WA0005~2-portrait.jpg" class="img-fluid rounded" alt="...">
+        </div>
+        <div class="col-lg-8 col-md-12 col-12  ">
+          <div class="card-body" style="text-shadow: 1px 1px black;">
+            <h4 class="card-title">A Bit About Me...</h4>
+            <p class="card-text">Well I have always been into technology, always been curious about the possibilities.
+              Since then I have been creating game levels/maps, modifying my favourite games which evolved into me
+              creating my own games using <b>Unity Framework</b>.
+              From then on, I learned Website Development basics to advanced which is the thing I specialize in now.
+              <br>
+              Additional Skills I learned include Desktop/Mobile Application Development, Databases and General Problem
+              Solving in Programming.
+              My Aim for the near future is to work with an emerging startup and help them using my existing skills, in
+              the process even acquiring more skills.
+              <br>
+              Eventually I would love to have my own startup, a game development studio or something which would allow
+              me to explore my creative side and bring a new genre/type of product.
+            </p>
+            <h4 class="card-title">Present Life...</h4>
+            <p class="card-text">Currently I am a student of <b>Information Technology</b> at <b>Middlesex University
+                London</b>.
+              I expect to graduate with a Bachelors Degree in September 2023.
+              <br>
+              Before coming to the UK, I was in Pakistan where I started Freelance Work on <b>Fiverr</b> &
+              <b>Upwork</b>.
+              This gave me the confidence to showcase my skills and improve upon not only my technical skills but also
+              my soft skills such as Communication and Client Etiquette.
+
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div id="skills" class="mt-5">
+
+    <h1>Main Skills</h1>
+
+    <div class="row" id="skills-figures">
+
+      <figure class="figure mb-5 col-lg-3 col-md-6 icons position-relative">
+          <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-info">
+            More Details
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        <img src="assets/img/Untitled design.png" class="figure-img img-fluid rounded" alt="HTML,CSS,JS,PHP,MySQL">
+        <hr>
+        <figcaption class="figure-caption" title="Website Development">Website Development</figcaption>
+      </figure>
+
+      <figure class="figure mb-5 col-lg-3 col-md-6 icons position-relative">
+        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary">
+          More Details
+          <span class="visually-hidden">unread messages</span>
+        </span>
+        <img src="assets/img/Untitled (600 × 600px).png" class="figure-img img-fluid rounded"
+          alt="PHP,C#,Java,Javascript,Python">
+        <hr>
+        <figcaption class="figure-caption" title="General Problem Solving">General Problem Solving</figcaption>
+      </figure>
+
+      <figure class="figure mb-5 col-lg-3 col-md-6 icons position-relative">
+        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-success">
+          More Details
+          <span class="visually-hidden">unread messages</span>
+        </span>
+        <img src="assets/img/Untitled design (1).png" class="figure-img img-fluid rounded" alt="">
+        <hr>
+        <figcaption class="figure-caption text-truncate" title="Cross Platform Application Development">Cross Platform
+          Application Development</figcaption>
+      </figure>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="projects" class="mt-5 py-4">
+
+    <h1>Projects <br><small style="font-size: 1rem;">(Major)</small></h1>
+
+    <div class="row p-5" id="">
+
+      <div class="card bg-transparent p-0 mb-3 col-lg-4 col-md-12">
+        <img src="assets/img/landscape-1280x720.png" class="card-img-top img-rounded" alt="...">
+        <div class="card-body ">
+          <h5 class="card-title">Muhafizz</h5>
+          <p class="card-text">Muhafizz is a revolutionary application designed to prioritize your safety and security
+            by keeping you up-to-date with events and incidents that may be potentially life threatening.
+            <br>
+          </p>
+          <p class="card-text"><a target="_blank" href="http://www.muhafizz.com">Muhafizz</a></p>
+        </div>
+      </div>
+
+      <div class="p-0 mb-3 col-lg-8 col-md-12 d-flex align-items-center justify-content-center">
+        <div class="row" id="muhafizz">
+          <div class="col">
+              <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Sept 2021</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Concept & Ideation</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Late Sept 2021</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Website Design & Deployment</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Oct</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">UI/UX For Mobile App</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Nov</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Android App Complete</p>
+                      </div>
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row p-5" id="">
+
+      <div class="p-0 mb-3 col-lg-8 col-md-6 d-flex align-items-center justify-content-center">
+        <div class="row" id="rolandkim">
+          <div class="col">
+              <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Mid Jan 2022</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">First Contact</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1"></p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Website Overhaul</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1"></p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Kajabi Store Setup</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Start of Feb</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">All Complete</p>
+                      </div>
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+      </div>
+      
+      <div class="card bg-transparent p-0 mb-3 col-lg-4 col-md-6">
+        <img src="assets/img/Roland-Y-Kim-Psychoeducation-Series-retangular-Logo-2-144x101-transformed.png" class="card-img-top img-rounded" alt="...">
+        <div class="card-body ">
+          <h5 class="card-title">Roland Kim</h5>
+          <p class="card-text">
+            Dr. Roland Kim, Ph.D. in clinical psychology, has been working with teenagers, young adults, parents, and couples for more than 20 years. I was a contributor in designing his website, kajabi landing page and mail template. 
+            <br>
+          </p>
+          <p class="card-text"><a target="_blank" href="https://www.rolandkim.com/">Roland Kim</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row p-5 " id="">
+
+      <div class="card bg-transparent p-0 mb-3 col-lg-4 col-md-6">
+        <img src="assets/img/frameink.png" class="card-img-top img-rounded" alt="...">
+        <div class="card-body ">
+          <h5 class="card-title">FRAME INK</h5>
+          <p class="card-text">FrameInk is your one-stop-shop for all your design and development needs. Helped design and develop the site from the existing template. 
+            <br>
+          </p>
+
+          <p class="card-text"><a target="_blank" href="https://ronraj101.github.io/FRAMEINK/index.html">FrameINK</a></p>
+        </div>
+      </div>
+
+      <div class="p-0 mb-3 col-lg-8 col-md-6 d-flex align-items-center justify-content-center">
+        <div class="row" id="frameink">
+          <div class="col">
+              <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">Aug 2022</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">First Contact</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1"></p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Template Changes</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1"></p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Media Integration</p>
+                      </div>
+                  </div>
+                  <div class="timeline-step">
+                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                          <div class="inner-circle"></div>
+                          <p class="h6 mt-3 mb-1">End of Aug</p>
+                          <p class="h6 text-muted mb-0 mb-lg-0">Final Retouching</p>
+                      </div>
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+      </div>
+
+    </div>    
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="row p-5 " id="contact">
+
+    <div class="col-lg-6 col-sm-12 text-start text-light">
+      <h3>Contact Via Email</h3>
+
+      <form action="" method="post">
+
+      <div class="mb-3 row">
+        <label for="staticEmail" class="col-form-label">To</label>
+        <div class="">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="ronitrai.rk@gmail.com">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputName" class="col-form-label">Your Name</label>
+        <div class="">
+          <input type="text" name="name" class="form-control" id="inputName" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputMessage" class="col-form-label">Message</label>
+        <div class="">
+          <textarea rows="5" type="text" name="message" class="form-control" id="inputMessage" required></textarea>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <input type="button" name="submit" class="btn btn-primary" value="Send Message">
+      </div>
+
+    </form>
+     <hr>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <h3>Alternative Contacts</h3>
+
+      <div class="row mt-5">
+        <div class="col">
+          <a href="https://www.linkedin.com/in/ronit-rai/" target="_blank">
+            <figure class="figure">
+              <img src="assets/linkedin.png" class="figure-img img-fluid rounded contact-img icons" alt="linkedin">
+            </figure>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://github.com/RonRaj101" target="_blank">
+            <figure class="figure">
+              <img src="assets/github.png" class="figure-img img-fluid rounded contact-img icons" alt="github">
+            </figure>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="https://www.instagram.com/ronitrai_1/" target="_blank">
+            <figure class="figure">
+              <img src="assets/instagram.png" class="figure-img img-fluid rounded contact-img icons" alt="instagram">
+            </figure>
+          </a>
+        </div>
+        <div class="col">
+          <a href="mailto:ronitrai.rk@gmail.com" target="_blank">
+            <figure class="figure">
+              <img src="assets/gmail.png" class="figure-img img-fluid rounded contact-img icons" alt="gmail">
+            </figure>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="mt-auto text-white-50">
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-   
 
-    <script type="module">
-      import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
-      createApp({
-        data() {
-          return {
-            message: 'Bootstrap + Vue.js Application'
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js'
+
+    createApp({
+      mounted() {
+        setInterval(this.changeText, 1000);
+      },
+      data() {
+        return {
+          messages: ['Curious Individual', 'Website Developer', 'Student', 'Internet Explorer'],
+          message: 'Normal Guy',
+          count: 0,
+        }
+      },
+      methods: {
+        changeText() {
+          this.message = this.messages[this.count];
+          this.count++;
+          if (this.count == this.messages.length) {
+            this.count = 0;
           }
         }
-      }).mount('#app')
-    </script>
-  </body>
+      }
+    }).mount('#app')
+  </script>
+</body>
+
 </html>
